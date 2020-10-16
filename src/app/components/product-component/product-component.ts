@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   product: ProductModel;
   isBought: boolean;
 
+  // желательно тут не добавлять зависимости, а информировать родителя о том, что надо сделать
   constructor(private cartService: CartService) {
 
   }

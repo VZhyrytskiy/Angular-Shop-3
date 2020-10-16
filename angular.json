@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-Shop"
+    }
+  },
+  "defaultProject": "Angular-Shop",
+  "cli": {
+    "analytics": false
+  }
 }

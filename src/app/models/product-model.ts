@@ -5,3 +5,4 @@ export class ProductModel {
     Price: number;
     Rate: number;
 }
+// не надо свойства начинать с верхнего регистра

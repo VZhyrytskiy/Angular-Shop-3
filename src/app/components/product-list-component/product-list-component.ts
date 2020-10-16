@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/services/products-service';
 export class ProductListComponent implements OnInit {
 
   products$: Observable<Array<ProductModel>>;
-  productss: Array<ProductModel> = new Array<ProductModel>();
+  productss: Array<ProductModel> = new Array<ProductModel>(); // не понял, где используется
 
   constructor(private productService: ProductService) { }
 

@@ -19,6 +19,7 @@ export class CartService {
     }
 
     contains(product: ProductModel) {
+      // может быть тут подойдет метод includes()?
         const index = this.products.indexOf(product);
         return index !== -1;
     }

@@ -23,7 +23,7 @@ export class CartService {
     removeProduct(product: ProductModel): void {
         if (this.contains(product)) {
             const boughtProduct = this.getBoughtProductByProduct(product);
-            if (boughtProduct.quantity == 1) {
+            if (boughtProduct.quantity === 1) {
                 const index = this.products.indexOf(boughtProduct);
                 this.products.splice(index, 1);
             } else {
@@ -44,7 +44,7 @@ export class CartService {
             const boughtProduct = this.getBoughtProductByProduct(product);
             const difference = quantity - boughtProduct.quantity;
 
-            if (quantity == 0) {
+            if (quantity === 0) {
                 const index = this.products.indexOf(boughtProduct);
                 this.products.splice(index, 1);
             }
@@ -62,7 +62,7 @@ export class CartService {
     }
 
     contains(product: ProductModel): boolean {
-        return this.getBoughtProductByProduct(product) != null;
+        return this.getBoughtProductByProduct(product) !== null;
     }
 
     get count(): number {
@@ -77,7 +77,7 @@ export class CartService {
         let boughtProduct = null;
 
         this.products.forEach(x => {
-            if (x.product == product) {
+            if (x.product === product) {
                 boughtProduct = x;
             }
         });

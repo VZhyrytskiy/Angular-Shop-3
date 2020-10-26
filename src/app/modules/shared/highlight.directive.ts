@@ -7,7 +7,6 @@ export class HighlightDirective {
 
     @HostBinding('class')
     attrClass = 'highlighting';
-   
     private color = 'lightgreen';
 
     constructor(private element: ElementRef) { }
@@ -23,6 +22,7 @@ export class HighlightDirective {
     }
 
     private setBackgroundColor(color: string): void {
+      // вы уже знаете о Renderer2
         this.element.nativeElement.style.backgroundColor = color;
     }
 }

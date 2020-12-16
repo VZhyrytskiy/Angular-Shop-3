@@ -19,6 +19,8 @@ export class TimingInterceptor implements HttpInterceptor {
             map((event: HttpResponse<any>) => {
                 if (this.urlParts.some(url => event.url.includes(url))) {
                     const hronometerEnd = Date.now();
+                    // это могут быть теоретически разные урлы для запроса и ответа
+                    // они просто содержат products
                     console.log(`Difference between request end response in ${event.url} is: ${hronometerEnd - hronometerStart} milliseconds`);
                 }
                 return event;
